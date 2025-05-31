@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Жук Александр | Депутат Липецкой области</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8fafc;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            bottom: -8px;
+            left: 0;
+            background: linear-gradient(90deg, #3b82f6 0%, #1d4ed8 100%);
+            border-radius: 2px;
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .photo-placeholder {
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+        }
+        
+        .problem-card {
+            border-left: 4px solid #ef4444;
+        }
+        
+        .solution-card {
+            border-left: 4px solid #10b981;
+        }
+        
+        .program-item {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .program-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mr-4">
+                        <i class="fas fa-user-tie text-blue-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold">Жук Александр Романович</h1>
+                        <p class="text-blue-100">Депутат представительного органа Липецкой области</p>
+                    </div>
+                </div>
+                <nav class="flex space-x-1 md:space-x-4">
+                    <a href="#about" class="px-3 py-2 rounded-md hover:bg-blue-700 transition">Обо мне</a>
+                    <a href="#program" class="px-3 py-2 rounded-md hover:bg-blue-700 transition">Программа</a>
+                    <a href="#achievements" class="px-3 py-2 rounded-md hover:bg-blue-700 transition">Достижения</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Молодой голос Липецкой области</h2>
+                <p class="text-xl mb-6 text-blue-100">Современные решения для развития нашего региона</p>
+                <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                    <a href="#program" class="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-gray-100 transition duration-300 text-center">
+                        Моя программа
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl animate-float photo-placeholder flex items-center justify-center">
+                    <!-- Здесь будет ваше фото -->
+                    <i class="fas fa-user text-gray-400 text-8xl"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center section-title">Обо мне</h2>
+            
+            <div class="flex flex-col lg:flex-row items-center lg:items-start">
+                <div class="lg:w-1/3 mb-8 lg:mb-0 flex justify-center">
+                    <div class="w-64 h-64 rounded-lg overflow-hidden shadow-lg">
+                        <!-- Здесь будет ваше фото -->
+                        <div class="w-full h-full bg-gray-200 flex items-center justify-center">
+                            <i class="fas fa-user text-gray-400 text-8xl"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-2/3 lg:pl-12">
+                    <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-user text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-600">ФИО</h3>
+                                    <p class="text-lg">Жук Александр Романович</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-birthday-cake text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-600">Возраст</h3>
+                                    <p class="text-lg">16 лет</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-graduation-cap text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-600">Место учебы</h3>
+                                    <p class="text-lg">МБОУ "Гимназия №97 г.Ельца"</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-laptop-code text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-600">Профиль</h3>
+                                    <p class="text-lg">Математика/Информатика</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-lg border border-gray-200">
+                            <h3 class="font-semibold text-lg mb-3">О себе</h3>
+                            <p class="text-gray-700">
+                                Я - активный молодой человек, который стремится внести свой вклад в развитие Липецкой области. 
+                                Несмотря на юный возраст, я уже добился значительных успехов в учебе и общественной деятельности. 
+                                Мои сильные стороны - аналитическое мышление, умение работать с информацией и находить нестандартные решения сложных задач.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Section -->
+    <section id="program" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center section-title">Моя программа</h2>
+            
+            <div class="max-w-4xl mx-auto space-y-8">
+                <!-- Программа 1 -->
+                <div class="program-item bg-white rounded-lg overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-green-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-trash-alt text-green-600"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold">Экология и обращение с отходами</h3>
+                        </div>
+                        
+                        <div class="ml-16 space-y-6">
+                            <div class="problem-card bg-red-50 p-5 rounded-r-lg">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mr-3 text-red-500">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-lg mb-2">Проблема</h4>
+                                        <p class="text-gray-700">
+                                            Загрязнение улиц бытовым мусором и неэффективная система обращения с отходами снижают качество жизни горожан и вредят окружающей среде.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="solution-card bg-green-50 p-5 rounded-r-lg">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mr-3 text-green-500">
+                                        <i class="fas fa-lightbulb"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-lg mb-2">Решение</h4>
+                                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                            <li>Добиваться запуска пилотного проекта по раздельному сбору мусора (пластик, стекло, бумага) в нескольких микрорайонах Ельца</li>
+                                            <li>Установка специализированных контейнеров и проведение просветительской кампании для жителей</li>
+                                            <li>Содействие привлечению в город компаний-переработчиков вторсырья через предоставление муниципальных преференций</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Программа 2 -->
+                <div class="program-item bg-white rounded-lg overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-graduation-cap text-blue-600"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold">Поддержка одаренных школьников</h3>
+                        </div>
+                        
+                        <div class="ml-16 space-y-6">
+                            <div class="problem-card bg-red-50 p-5 rounded-r-lg">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mr-3 text-red-500">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-lg mb-2">Проблема</h4>
+                                        <p class="text-gray-700">
+                                            Недостаточная системная поддержка одаренных школьников Ельца и дефицит доступных качественных олимпиадных программ сдерживают интеллектуальный потенциал нашей молодежи.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="solution-card bg-green-50 p-5 rounded-r-lg">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mr-3 text-green-500">
+                                        <i class="fas fa-lightbulb"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-lg mb-2">Решение</h4>
+                                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                            <li>Выделение целевого финансирования на запуск и поддержку кружков олимпиадной подготовки на базе школ Ельца</li>
+                                            <li>Обеспечение методической поддержки педагогам, работающим с одаренными детьми</li>
+                                            <li>Учреждение муниципальных грантов для школьников Ельца, показавших высокие результаты на региональном и заключительном этапах ВсОШ</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Программа 3 -->
+                <div class="program-item bg-white rounded-lg overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-tractor text-purple-600"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold">Цифровизация сельского хозяйства</h3>
+                        </div>
+                        
+                        <div class="ml-16 space-y-6">
+                            <div class="problem-card bg-red-50 p-5 rounded-r-lg">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mr-3 text-red-500">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-lg mb-2">Проблема</h4>
+                                        <p class="text-gray-700">
+                                            Предприятия и фермерские хозяйства Елецкого района зачастую не используют современные цифровые инструменты и технологии анализа данных, что снижает их эффективность, конкурентоспособность и устойчивость.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="solution-card bg-green-50 p-5 rounded-r-lg">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mr-3 text-green-500">
+                                        <i class="fas fa-lightbulb"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-lg mb-2">Решение</h4>
+                                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                            <li>Содействие запуску пилотных проектов на передовых хозяйствах с использованием технологий точного земледелия (GPS-навигация, дроны для мониторинга полей)</li>
+                                            <li>Внедрение систем анализа данных для оптимизации полива и внесения удобрений</li>
+                                            <li>Поиск финансирования из областного бюджета и федеральных программы для цифровизации АПК</li>
+                                            <li>Стимулирование внедрения алгоритмов машинного обучения и искусственного интеллекта на предприятиях агропромышленного комплекса</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Программа 4 -->
+                <div class="program-item bg-white rounded-lg overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-chalkboard-teacher text-yellow-600"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold">Поддержка педагогов</h3>
+                        </div>
+                        
+                        <div class="ml-16 space-y-6">
+                            <div class="problem-card bg-red-50 p-5 rounded-r-lg">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mr-3 text-red-500">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-lg mb-2">Проблема</h4>
+                                        <p class="text-gray-700">
+                                            Нехватка квалифицированных педагогов, особенно в естественно-научных дисциплинах и среди молодежи, вызванная недостаточным финансированием школ и отсутствием ощутимой поддержки молодых специалистов.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="solution-card bg-green-50 p-5 rounded-r-lg">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mr-3 text-green-500">
+                                        <i class="fas fa-lightbulb"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-lg mb-2">Решение</h4>
+                                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                            <li>Выделение средств бюджета на оснащение школ современным оборудованием и учебными материалами</li>
+                                            <li>Разработка программы поддержки молодых педагогов, включая подъемные выплаты и льготное жилье</li>
+                                            <li>Создание системы наставничества для начинающих учителей</li>
+                                            <li>Повышение квалификации действующих педагогов за счет муниципального бюджета</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-white rounded-xl shadow-md p-8 max-w-4xl mx-auto">
+                <h3 class="text-2xl font-semibold mb-6 text-center">Мое видение развития региона</h3>
+                <p class="text-gray-700 mb-4">
+                    Как молодой депутат, я верю, что будущее Липецкой области зависит от инвестиций в образование, технологии и экологию. 
+                    Моя программа направлена на создание условий для гармоничного развития молодежи и комфортной жизни всех жителей региона.
+                </p>
+                <p class="text-gray-700">
+                    Я выступаю за прозрачность в принятии решений и открытый диалог с жителями. 
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center section-title">Мои достижения</h2>
+            
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-8">
+                    <div class="bg-blue-50 rounded-xl p-8 h-full">
+                        <h3 class="text-2xl font-semibold mb-6 text-blue-800">Учебные достижения</h3>
+                        
+                        <div class="space-y-6">
+                            <!-- Достижение 1 -->
+                            <div class="flex">
+                                <div class="flex-shrink-0 mr-4">
+                                    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 text-blue-600">
+                                        <i class="fas fa-medal text-xl"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold">Призер регионального этапа ВсОШ</h4>
+                                    <p class="text-gray-600">Обществознание, 2024-2025 учебный год</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Достижение 2 -->
+                            <div class="flex">
+                                <div class="flex-shrink-0 mr-4">
+                                    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 text-blue-600">
+                                        <i class="fas fa-trophy text-xl"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold">Призер регионального трека "Большие вызовы"</h4>
+                                    <p class="text-gray-600">2 место во Всероссийском конкурсе научно-технологических проектов</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Достижение 3 -->
+                            <div class="flex">
+                                <div class="flex-shrink-0 mr-4">
+                                    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 text-blue-600">
+                                        <i class="fas fa-atom text-xl"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold">Участник программы "Большие вызовы"</h4>
+                                    <p class="text-gray-600">Образовательный центр "Сириус", г. Сочи</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 lg:pl-8">
+                    <div class="bg-gray-50 rounded-xl p-8 h-full">
+                        <h3 class="text-2xl font-semibold mb-6 text-gray-800">Общественная деятельность</h3>
+                        
+                        <div class="space-y-6">
+                            <!-- Достижение 1 -->
+                            <div class="flex">
+                                <div class="flex-shrink-0 mr-4">
+                                    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 text-gray-600">
+                                        <i class="fas fa-users text-xl"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold">Лидер школьного самоуправления</h4>
+                                    <p class="text-gray-600">Организация мероприятий и инициатив в гимназии</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Достижение 2 -->
+                            <div class="flex">
+                                <div class="flex-shrink-0 mr-4">
+                                    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 text-gray-600">
+                                        <i class="fas fa-hands-helping text-xl"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold">Волонтерская деятельность</h4>
+                                    <p class="text-gray-600">Участие в социальных и экологических проектах</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Достижение 3 -->
+                            <div class="flex">
+                                <div class="flex-shrink-0 mr-4">
+                                    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 text-gray-600">
+                                        <i class="fas fa-microphone text-xl"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold">Участник молодежных форумов</h4>
+                                    <p class="text-gray-600">Представление идей по развитию региона</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold">Жук Александр Романович</h3>
+                    <p class="text-gray-400">Депутат представительного органа Липецкой области</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#about" class="text-gray-400 hover:text-white transition">Обо мне</a>
+                    <a href="#program" class="text-gray-400 hover:text-white transition">Программа</a>
+                    <a href="#achievements" class="text-gray-400 hover:text-white transition">Достижения</a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400">
+                <p>© 2025 Жук Александр</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=alekszh/vibory-web" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
